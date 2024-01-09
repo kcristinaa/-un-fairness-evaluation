@@ -1,6 +1,18 @@
 import numpy as np
 import pandas as pd
 
+# A function to assign a category based on the madrs score
+def assign_category(score):
+    if score >= 0 and score <= 6:
+        return "absent"
+    elif score >= 7 and score <= 19:
+        return "mild depression"
+    elif score >= 20 and score <= 34:
+        return "moderate depression"
+    elif score >= 35 and score <= 60:
+        return "severe depression"
+    else:
+        return "invalid score"
 
 def sin_transform(values):
     """
