@@ -14,6 +14,14 @@ def assign_category(score):
     else:
         return "invalid score"
 
+# Creates a new column with 1.0 for weekend dates and 0.0 for weekdays
+def is_weekend(df):
+    df.date = pd.to_datetime(df.timestamp, infer_datetime_format=True)
+    df.loc[:, "is_weekend"] = df.timestamp.dt.dayofweek  # returns 0-4 for Monday-Friday and 5-6 for Weekend
+    df.loc[:, 'is_weekend'] = df['is_weekend'].apply(lambda d: 1.0 if d > 4 else 0.0)
+
+    return df
+
 def sin_transform(values):
     """
     Applies SIN transform to a series value.
@@ -63,3 +71,28 @@ def date_engineering(data):
     data = data.drop(columns=['year', 'month', 'weekday', 'week', 'day'])
 
     return data
+
+def one_hot_encoding(df):
+    # edu encoding
+    df['edu'].replace(to_replace=['', '6-10', '11-15', '16-20'], value=[0, 1, 2, 3], inplace=True)
+    # category_madrs
+    df['category_madrs'].replace(to_replace=['moderate depression', 'mild depression'], value=[0, 1], inplace=True)
+    return df
+
+# adds activity quantile
+def add_activity_quantile(df):
+    df = df.astype({"user_id": str})
+    ids = list(np.unique((df[['user_id']])))
+
+    df["activity_quantile"] = pd.qcut(df["activity"].rank(method='first'), [0, .25, .75, 1], labels=["low", "medium", "high"])
+    df['activity_quantile'].replace(to_replace=['low', 'medium', 'high'], value=[0, 1, 2], inplace=True)
+
+    d = pd.DataFrame()
+    for user in ids:
+        user_df = df[(df["user_id"] == user)]
+        user_df["user_activity_quantile"] = pd.qcut(user_df["activity"].rank(method='first'), [0, .25, .75, 1],
+                                                  labels=[0, 1, 2])
+        d = pd.concat([d, user_df])
+    df = d
+
+    return df
