@@ -16,7 +16,7 @@ def assign_category(score):
 
 # Creates a new column with 1.0 for weekend dates and 0.0 for weekdays
 def is_weekend(df):
-    df.date = pd.to_datetime(df.timestamp, infer_datetime_format=True)
+    df.timestamp = pd.to_datetime(df.timestamp, infer_datetime_format=True)
     df.loc[:, "is_weekend"] = df.timestamp.dt.dayofweek  # returns 0-4 for Monday-Friday and 5-6 for Weekend
     df.loc[:, 'is_weekend'] = df['is_weekend'].apply(lambda d: 1.0 if d > 4 else 0.0)
 
