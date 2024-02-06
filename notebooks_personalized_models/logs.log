@@ -6810,3 +6810,115 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2024-01-22 16:55:34,208:INFO:Set up simple imputation.
 2024-01-22 16:55:34,209:INFO:Set up encoding of categorical features.
 2024-01-22 16:55:34,209:INFO:Set up variance threshold.
+2024-01-29 18:16:06,086:WARNING:No module named 'cuml'.
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-29 18:16:06,094:WARNING:No module named 'cuml'.
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-29 18:16:06,095:WARNING:No module named 'cuml'.
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-29 18:16:06,095:WARNING:No module named 'cuml'.
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-29 18:16:31,488:INFO:PyCaret ClassificationExperiment
+2024-01-29 18:16:31,488:INFO:Logging name: clf-default-name
+2024-01-29 18:16:31,488:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2024-01-29 18:16:31,488:INFO:version 3.0.0.rc3
+2024-01-29 18:16:31,488:INFO:Initializing setup()
+2024-01-29 18:16:31,488:INFO:self.USI: 50bb
+2024-01-29 18:16:31,488:INFO:self.variable_keys: {'_ml_usecase', 'display_container', 'target_param', 'fix_imbalance', 'seed', '_all_models_internal', 'pipeline', 'memory', 'exp_name_log', 'USI', 'html_param', 'data', 'log_plots_param', 'gpu_param', '_gpu_n_jobs_param', '_all_models', 'fold_generator', 'y', '_is_multiclass', 'fold_groups_param', 'y_test', 'variable_keys', 'fold_shuffle_param', 'n_jobs_param', 'exp_id', '_all_metrics', 'X', 'logging_param', 'master_model_container', 'X_train', 'idx', 'y_train', '_available_plots', 'X_test'}
+2024-01-29 18:16:31,488:INFO:Checking environment
+2024-01-29 18:16:31,488:INFO:python_version: 3.9.18
+2024-01-29 18:16:31,488:INFO:python_build: ('main', 'Sep 11 2023 14:09:26')
+2024-01-29 18:16:31,488:INFO:machine: AMD64
+2024-01-29 18:16:31,488:INFO:platform: Windows-10-10.0.19044-SP0
+2024-01-29 18:16:31,488:INFO:Memory: svmem(total=16952647680, available=4565000192, percent=73.1, used=12387647488, free=4565000192)
+2024-01-29 18:16:31,488:INFO:Physical Core: 4
+2024-01-29 18:16:31,488:INFO:Logical Core: 8
+2024-01-29 18:16:31,488:INFO:Checking libraries
+2024-01-29 18:16:31,488:INFO:System:
+2024-01-29 18:16:31,488:INFO:    python: 3.9.18 (main, Sep 11 2023, 14:09:26) [MSC v.1916 64 bit (AMD64)]
+2024-01-29 18:16:31,488:INFO:executable: C:\Users\Christina\anaconda3\python.exe
+2024-01-29 18:16:31,488:INFO:   machine: Windows-10-10.0.19044-SP0
+2024-01-29 18:16:31,488:INFO:PyCaret required dependencies:
+2024-01-29 18:16:31,488:WARNING:C:\Users\Christina\anaconda3\lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2024-01-29 18:16:32,003:WARNING:C:\Users\Christina\anaconda3\lib\site-packages\dask\dataframe\utils.py:366: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  _numeric_index_types = (pd.Int64Index, pd.Float64Index, pd.UInt64Index)
+
+2024-01-29 18:16:32,003:WARNING:C:\Users\Christina\anaconda3\lib\site-packages\dask\dataframe\utils.py:366: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  _numeric_index_types = (pd.Int64Index, pd.Float64Index, pd.UInt64Index)
+
+2024-01-29 18:16:32,003:WARNING:C:\Users\Christina\anaconda3\lib\site-packages\dask\dataframe\utils.py:366: FutureWarning: pandas.UInt64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  _numeric_index_types = (pd.Int64Index, pd.Float64Index, pd.UInt64Index)
+
+2024-01-29 18:16:32,742:INFO:                 pip: 21.2.4
+2024-01-29 18:16:32,742:INFO:          setuptools: 0.dev0+unknown
+2024-01-29 18:16:32,742:INFO:             pycaret: 3.0.0.rc3
+2024-01-29 18:16:32,742:INFO:             IPython: 7.29.0
+2024-01-29 18:16:32,742:INFO:          ipywidgets: 7.6.5
+2024-01-29 18:16:32,742:INFO:                tqdm: 4.62.3
+2024-01-29 18:16:32,742:INFO:               numpy: 1.22.3
+2024-01-29 18:16:32,742:INFO:              pandas: 1.4.4
+2024-01-29 18:16:32,742:INFO:              jinja2: 2.11.3
+2024-01-29 18:16:32,742:INFO:               scipy: 1.7.3
+2024-01-29 18:16:32,742:INFO:              joblib: 1.1.0
+2024-01-29 18:16:32,742:INFO:             sklearn: 1.1.2
+2024-01-29 18:16:32,742:INFO:                pyod: Installed but version unavailable
+2024-01-29 18:16:32,742:INFO:            imblearn: 0.9.1
+2024-01-29 18:16:32,742:INFO:   category_encoders: 2.5.0
+2024-01-29 18:16:32,742:INFO:            lightgbm: 3.3.2
+2024-01-29 18:16:32,742:INFO:               numba: 0.55.2
+2024-01-29 18:16:32,742:INFO:            requests: 2.28.1
+2024-01-29 18:16:32,742:INFO:          matplotlib: 3.4.3
+2024-01-29 18:16:32,742:INFO:          scikitplot: 0.3.7
+2024-01-29 18:16:32,742:INFO:         yellowbrick: 1.5
+2024-01-29 18:16:32,742:INFO:              plotly: 5.5.0
+2024-01-29 18:16:32,742:INFO:             kaleido: 0.2.1
+2024-01-29 18:16:32,742:INFO:         statsmodels: 0.13.2
+2024-01-29 18:16:32,742:INFO:              sktime: 0.11.4
+2024-01-29 18:16:32,742:INFO:               tbats: Installed but version unavailable
+2024-01-29 18:16:32,742:INFO:            pmdarima: 2.0.1
+2024-01-29 18:16:32,742:INFO:              psutil: 5.9.2
+2024-01-29 18:16:32,742:INFO:None
+2024-01-29 18:16:32,742:INFO:Set up data.
+2024-01-29 18:16:32,758:INFO:Set up train/test split.
+2024-01-29 18:16:32,758:INFO:Set up data.
+2024-01-29 18:16:32,773:INFO:Assigning column types.
+2024-01-29 18:16:32,773:INFO:Set up folding strategy.
+2024-01-29 18:16:32,773:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2024-01-29 18:16:32,858:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-01-29 18:16:32,873:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-01-29 18:16:32,989:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,005:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,074:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-01-29 18:16:33,074:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-01-29 18:16:33,121:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,136:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,136:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2024-01-29 18:16:33,174:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-01-29 18:16:33,205:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,205:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,256:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-01-29 18:16:33,298:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,306:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,306:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2024-01-29 18:16:33,422:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,422:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,554:INFO:Soft dependency imported: xgboost: 1.7.5
+2024-01-29 18:16:33,556:WARNING:No module named 'catboost'.
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-01-29 18:16:33,567:INFO:Preparing preprocessing pipeline...
+2024-01-29 18:16:33,567:INFO:Set up simple imputation.
+2024-01-29 18:16:33,575:INFO:Set up encoding of categorical features.
+2024-01-29 18:16:33,575:INFO:Set up variance threshold.
