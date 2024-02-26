@@ -82,7 +82,10 @@ def one_hot_encoding(df):
                       value=[0, 0, 1, 1, 2, 2, 3, 3, 4, 4], inplace=True)
     return df
 
-# adds activity quantile
+# adds activity quantile - categorizes the "activity" values into quantiles both globally and per user
+# In summary, this function enriches the dataset with insights into how active each user is relative to the
+# entire dataset and within the context of their own activity history, categorizing activity levels into
+# quantiles both globally and individually.
 def add_activity_quantile(df):
     df = df.astype({"user_id": str})
     ids = list(np.unique((df[['user_id']])))
