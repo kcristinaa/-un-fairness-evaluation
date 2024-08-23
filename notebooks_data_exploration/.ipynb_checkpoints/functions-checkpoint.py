@@ -78,8 +78,9 @@ def one_hot_encoding(df):
     # category_madrs
     df['category_madrs'].replace(to_replace=['moderate depression', 'mild depression'], value=[0, 1], inplace=True)
     #age
-    df['age'].replace(to_replace=['20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65-69'],
-                      value=[0, 0, 1, 1, 2, 2, 3, 3, 4, 4], inplace=True)
+    df['age'].replace(to_replace=['<=45', '>45'], value=[0, 1], inplace=True)
+    #gender
+    df['gender'].replace(to_replace=['Male', 'Female'], value=[0, 1], inplace=True)
     return df
 
 # adds activity quantile - categorizes the "activity" values into quantiles both globally and per user
